@@ -15,9 +15,9 @@ La API debe haber cambiado porque este TP ya no funciona :(
 ## Ejecucion
 
 Primero hay que setear la variable de entorno SPORTRADAR_API. Para ello:
-- 1. Crear una nueva cuenta gratuita en el sitio Developers SportRadar(https://developer.sportradar.com/member/register)
-- 2. Una vez creada la cuenta, crear una nueva “application”, con formato XML y luego crear una API Key para “NASCAR v3”.
-- 3. Ejecutar el siguiente comando:
+1. Crear una nueva cuenta gratuita en el sitio Developers SportRadar(https://developer.sportradar.com/member/register)
+2. Una vez creada la cuenta, crear una nueva “application”, con formato XML y luego crear una API Key para “NASCAR v3”.
+3. Ejecutar el siguiente comando:
 
 ```sh
 export SPORTRADAR_API=”<api_key_generada>”
