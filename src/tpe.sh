@@ -2,6 +2,7 @@
 
 YEAR=$1
 TYPE=$2
+SPORTRADAR_API=d28f2awxd2ar5vz4xeg5vzy8
 
 function putError() {
     echo '<?xml version="1.0" encoding="UTF-8"?>' > nascar_data.xml
@@ -39,8 +40,8 @@ then
 
 else
     # Obtenemos los xmls.
-    curl http://api.sportradar.us/nascar-ot3/$TYPE/$YEAR/drivers/list.xml?api_key=${SPORTRADAR_API} -o drivers_list.xml
-    curl http://api.sportradar.us/nascar-ot3/$TYPE/$YEAR/standings/drivers.xml?api_key=${SPORTRADAR_API} -o drivers_standings.xml
+    curl http://api.sportradar.us/nascar-ot3/$TYPE/$YEAR/drivers/list.xml?api_key=$SPORTRADAR_API -o drivers_list.xml
+    curl http://api.sportradar.us/nascar-ot3/$TYPE/$YEAR/standings/drivers.xml?api_key=$SPORTRADAR_API -o drivers_standings.xml
 
     # Borramos los namespaces
     sed -i 's/xmlns=\"http:\/\/feed.elasticstats.com\/schema\/nascar\/series-v2.0.xsd\" //' drivers_list.xml

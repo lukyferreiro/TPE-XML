@@ -1,1 +1,0 @@
- There must be 2 arguments (year, serie_type) 
